@@ -23,9 +23,16 @@ async function apiTemplate(
     return result;
 }
 
-export function getPages(){
+export function getPages(number:string){
     return apiTemplate(
       "pages",
-      "pagination[page]=5&pagination[pageSize]=10",
+      `pagination[page]=${number}&pagination[pageSize]=10`,
+    );
+}
+
+export function getPageBySlug(slug:string){
+    return apiTemplate(
+      `pages`,
+      `filters[slug][$eq]=${slug}`,
     );
 }
