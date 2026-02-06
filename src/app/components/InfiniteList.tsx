@@ -20,7 +20,6 @@ export default function InfiniteList() {
     fetchNextPage,
     isLoading,
     hasNextPage,
-    isFetching,
     isFetchingNextPage,
   } = useInfiniteQuery({
     queryKey: ["pages"],
@@ -52,12 +51,12 @@ export default function InfiniteList() {
 
       <LoadMoreButton
         onClick={fetchNextPage}
-        disabled={!hasNextPage || isFetching}
+        disabled={!hasNextPage || isFetchingNextPage}
         loading={isFetchingNextPage}
         hasNextPage={hasNextPage}
       />
 
-      {isFetchingNextPage && <p>Loading more...</p>}
+      {isFetchingNextPage && <p>fetching...</p>}
     </div>
   );
 }

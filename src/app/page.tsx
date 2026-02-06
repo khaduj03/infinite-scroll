@@ -5,7 +5,7 @@ import InfiniteList from "./components/InfiniteList";
 import PaginatedList from "./components/PaginatedList";
 
 export default function Home() {
-  const [isInfinite, setIsInfinite] = useState(false);
+  const [isInfinite, setIsInfinite] = useState(true);
 
   return (
     <main className="min-h-screen bg-gray-50 flex flex-col items-center py-10 px-4">

@@ -18,7 +18,7 @@ export default function LoadMoreButton({
       <button
         onClick={onClick}
         disabled={disabled}
-        className="rounded-full bg-blue-600 px-6 py-2 text-base text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-blue-300"
+        className="rounded-full cursor-pointer! bg-blue-600 px-6 py-2 text-base text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-blue-300"
       >
         {loading
           ? "Loading more..."
